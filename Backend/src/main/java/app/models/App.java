@@ -1,13 +1,12 @@
-package com.Proyecto2.Lenguajes.models;
+package app.models;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-
 @Entity
 public class App {
-    
+
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
@@ -17,12 +16,16 @@ public class App {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "number")
+    private int number; // Nuevo atributo 'number'
+
     public App() {
     }
 
-    public App(String id, String name) {
+    public App(String id, String name, int number) {
         this.id = id;
         this.name = name;
+        this.number = number;
     }
 
     public String getId() {
@@ -39,5 +42,13 @@ public class App {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

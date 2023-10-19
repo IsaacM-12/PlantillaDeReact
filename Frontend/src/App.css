@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.listarVar button {
+  margin: 10px; /* Ajusta el valor de padding según tus necesidades */
+}

@@ -15,17 +15,8 @@
 -- --------------------------------- --------
 -- -- -- TABLES
 -- -- ---------------------------------------
--- CREATE TABLE App (
---                          id VARCHAR(100) PRIMARY KEY,
---                          name VARCHAR(100) NOT NULL
--- );
+-- drop database plantillamysql;
+--create database plantillamysql;
+--use plantillamysql;
 --
--- --------------------------------- --------
--- -- -- PROCEDURES
--- -- ---------------------------------------
---
--- delimiter //
--- CREATE PROCEDURE searchByKeyWords(IN keyWord VARCHAR(255))
--- BEGIN
--- SELECT * FROM image WHERE description LIKE CONCAT('%', keyWord, '%');
--- END//
+--SELECT * from App;

@@ -1,4 +1,4 @@
-package com.Proyecto2.Lenguajes;
+package com.Proyecto2.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
