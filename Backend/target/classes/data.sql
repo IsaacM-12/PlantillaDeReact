@@ -1,0 +1,31 @@
+-- Solo para h2 DEBE DESCOMENTARLO
+--
+-- insert into App(id,name) values(1,'name1');
+-- insert into App(id,name) values(2,'name2');
+
+
+-- ----------------------------------------------------------
+-- MYSQL LO QUE DEBE CORRER EN LA BASE MYSQL
+-- ----------------------------------------------------------
+
+-- drop database ioproyect;
+-- create database ioproyect;
+-- use ioproyect;
+--
+-- --------------------------------- --------
+-- -- -- TABLES
+-- -- ---------------------------------------
+-- CREATE TABLE App (
+--                          id VARCHAR(100) PRIMARY KEY,
+--                          name VARCHAR(100) NOT NULL
+-- );
+--
+-- --------------------------------- --------
+-- -- -- PROCEDURES
+-- -- ---------------------------------------
+--
+-- delimiter //
+-- CREATE PROCEDURE searchByKeyWords(IN keyWord VARCHAR(255))
+-- BEGIN
+-- SELECT * FROM image WHERE description LIKE CONCAT('%', keyWord, '%');
+-- END//
