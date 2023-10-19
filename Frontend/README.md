@@ -7,7 +7,7 @@
 
 ## Tecnologías Utilizadas
 
-- React (^18.2.0)
+- React (^18.2.0) con react-router-dom
 - Bootstrap
 
 ## Instrucciones para Iniciar la Aplicación
