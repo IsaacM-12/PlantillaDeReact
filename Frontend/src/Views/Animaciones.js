@@ -1,5 +1,5 @@
 import "react-notifications/lib/notifications.css";
-import { NotificationContainer } from "react-notifications";
+import "../Css/Animations.css";
 
 const Animaciones = () => {
   return (
@@ -35,6 +35,12 @@ const Animaciones = () => {
       <div className="dividirDiv6">
         <button class="animated-button3">Click Me!</button>
       </div>
+
+      <div class="container-figures">
+        <div class="circle"></div>
+        <div class="square"></div>
+        <div class="triangle"></div>
+    </div>
       
     </div>
   );

@@ -19,7 +19,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Plantilla />} />
+            <Route index element={<Animaciones />} />
+            <Route path="/plantilla" element={<Plantilla />} />
             <Route path="/galery" element={<Galery />} />
             <Route path="/animacion" element={<Animaciones />} />
             <Route path="*" element={<NotFound />} />
