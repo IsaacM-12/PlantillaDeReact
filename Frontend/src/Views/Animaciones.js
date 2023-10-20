@@ -36,6 +36,8 @@ const Animaciones = () => {
         <button class="animated-button3">Click Me!</button>
       </div>
 
+      <h1> z-index </h1>
+
       <div class="container-figures">
         <div class="circle"></div>
         <div class="square"></div>
