@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Plantilla from "./Views/Plantilla";
 import Layout from "./Components/Layout";
+import Galery from "./Views/Galery";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Plantilla />} />
-            <Route path="/calcular" element={<Plantilla />} />
+            <Route path="/galery" element={<Galery />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

@@ -5,3 +5,17 @@
 .listarVar button {
   margin: 10px; /* Ajusta el valor de padding según tus necesidades */
 }
+
+/* ---------------------------------- */
+/* parte de la galeria  */
+/* ---------------------------------- */
+.img-gallery {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.img-gallery:hover {
+  transform: scale(1.1);
+}

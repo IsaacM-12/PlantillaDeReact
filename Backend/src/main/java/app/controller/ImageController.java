@@ -1,56 +1,55 @@
 package app.controller;
 
-import app.models.App;
-import app.repository.AppRepository;
+import app.models.Image;
+import app.repository.ImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 import java.util.Optional;
 
 @RestController
-public class AppController {
+public class ImageController {
 
     @Autowired
-    private AppRepository appRepository;
+    private ImageRepository imageRepository;
 
     // Seleccionar todos
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping(path = "/app")
-    public List<App> getAll() {
-        return appRepository.findAll();
+    @GetMapping(path = "/image")
+    public List<Image> getAll() {
+        return imageRepository.findAll();
     }
 
     // Seleccionar por ID
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping(path = "/app/{id}")
-    public App getById(@PathVariable String id) {
-        Optional<App> app = appRepository.findById(id);
+    @GetMapping(path = "/image/{id}")
+    public Image getById(@PathVariable String id) {
+        Optional<Image> image = imageRepository.findById(id);
 
-        if (app.isEmpty()) {
+        if (image.isEmpty()) {
             throw new RuntimeException("No encontrado: " + id);
         }
-        return app.get();
+        return image.get();
     }
 
     // Crear
     @CrossOrigin(origins = "http://localhost:3000")
-    @PostMapping(path = "/app")
-    public void create(@RequestBody App req) {
-        appRepository.save(req);
+    @PostMapping(path = "/image")
+    public void create(@RequestBody Image req) {
+        imageRepository.save(req);
     }
 
     // Borrar por ID
     @CrossOrigin(origins = "http://localhost:3000")
-    @DeleteMapping(path = "/app/{id}")
+    @DeleteMapping(path = "/image/{id}")
     public void deleteById(@PathVariable String id) {
-        Optional<App> app = appRepository.findById(id);
+        Optional<Image> image = imageRepository.findById(id);
 
-        if (app.isEmpty()) {
+        if (image.isEmpty()) {
             throw new RuntimeException("No encontrado: " + id);
         } else {
-            appRepository.deleteById(id);
+            imageRepository.deleteById(id);
         }
     }
 }

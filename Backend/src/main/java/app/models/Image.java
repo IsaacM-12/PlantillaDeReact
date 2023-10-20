@@ -4,7 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-public class App {
+public class Image {
 
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -15,18 +15,18 @@ public class App {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "number")
-    private int number; // Nuevo atributo 'number'
+    @Column(name = "url")
+    private String url;
 
-    public App() {
+    public Image() {
     }
 
-    public App(String id, String name, int number) {
-        this.id = id;
+    public Image(String name, String url) {
         this.name = name;
-        this.number = number;
+        this.url = url;
     }
 
+    // Getters and setters
     public String getId() {
         return id;
     }
@@ -43,11 +43,11 @@ public class App {
         this.name = name;
     }
 
-    public int getNumber() {
-        return number;
+    public String getUrl() {
+        return url;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

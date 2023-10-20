@@ -3,7 +3,7 @@ import axios from "axios";
 
 const Plantilla = () => {
   // -------------------------------------------------------------
-  // Estas se mostraran en el html
+  // Estas se mostraran en el HTML
   // -------------------------------------------------------------
   const [showVariables, setshowVariables] = useState([]);
 
@@ -21,6 +21,13 @@ const Plantilla = () => {
     setinputVarToDelete(id);
     deleteVariableBD();
   };
+
+  // -------------------------------------------------------------
+  // Cada vez que carga la pantalla
+  // -------------------------------------------------------------
+  useEffect(() => {
+    selectVariablesBD();
+  }, []); // El segundo argumento vacío asegura que se llame solo una vez al cargar la página
 
   // -------------------------------------------------------------
   // crea las variables
@@ -109,13 +116,6 @@ const Plantilla = () => {
       console.error("Error fetching data:", error);
     }
   };
-
-  // -------------------------------------------------------------
-  // llama selectVariables cada vez que carga la pantalla
-  // -------------------------------------------------------------
-  useEffect(() => {
-    selectVariablesBD();
-  }, []); // El segundo argumento vacío asegura que se llame solo una vez al cargar la página
 
   return (
     <div className="container mt-5">
