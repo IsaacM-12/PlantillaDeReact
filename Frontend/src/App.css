@@ -19,3 +19,152 @@
 .img-gallery:hover {
   transform: scale(1.1);
 }
+
+/* ---------------------------------- */
+/* Probar animaciones */
+/* ---------------------------------- */
+
+/* Numero 1 */
+.dividirDiv1 {
+  padding-top: 40px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(98, 98, 99);
+  height: 250px;
+}
+
+.animated-container-siu1 {
+  text-align: start;
+  width: 95%;
+  overflow: hidden;
+}
+
+.animated-element-siu1 {
+  position: relative;
+  animation: moveAndFade 10s linear infinite;
+}
+
+@keyframes moveAndFade {
+  0% {
+    left: 0;
+    opacity: 1;
+    color: red;
+    font-size: 74px;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.5;
+    color: blue;
+    font-size: 42px;
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+    color: greenyellow;
+    font-size: 74px;
+  }
+}
+
+/* Numero 2 */
+.dividirDiv2 {
+  padding-top: 50px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(35, 35, 212);
+  height: 250px;
+}
+
+.animated-container-siu2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.animated-element-siu2 {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(35px);
+  }
+}
+
+/* Numero 3 */
+.dividirDiv3 {
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(186, 197, 248);
+  height: 250px;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-container-siu3 {
+  position: relative;
+}
+
+.animated-element-siu3 {
+  font-size: 36px;
+  color: #ff5733;
+  animation: moveAndRotate 6s ease-in-out infinite,
+    changeColor 3s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes moveAndRotate {
+  0% {
+    transform: translate(-100%, 100%) rotate(0deg);
+  }
+  50% {
+    transform: translate(100%, -100%) rotate(580deg);
+  }
+  100% {
+    transform: translate(-100%, 100%) rotate(360deg);
+  }
+}
+
+@keyframes changeColor {
+  0%,
+  100% {
+    color: #ff5733;
+  }
+  25% {
+    color: #33ff57;
+  }
+  50% {
+    color: #5733ff;
+  }
+  75% {
+    color: #ff5733;
+  }
+}
