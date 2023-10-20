@@ -4,6 +4,7 @@ import { NotificationContainer } from "react-notifications";
 const Animaciones = () => {
   return (
     <div>
+      <h1> Animaciones con texto </h1>
       <div className="dividirDiv1">
         <div className="animated-container-siu1">
           <div className="animated-element-siu1">¡SIUUU!</div>
@@ -21,6 +22,20 @@ const Animaciones = () => {
           <div className="animated-element-siu3">¡SIUUU!</div>
         </div>
       </div>
+
+      <h1> Animaciones con botones </h1>
+      <div className="dividirDiv4">
+        <button class="animated-button1">Click Me!</button>
+      </div>
+
+      <div className="dividirDiv5">
+        <button class="animated-button2">Click Me!</button>
+      </div>
+
+      <div className="dividirDiv6">
+        <button class="animated-button3">Click Me!</button>
+      </div>
+      
     </div>
   );
 };
