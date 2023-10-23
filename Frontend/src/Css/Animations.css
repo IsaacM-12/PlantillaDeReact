@@ -538,6 +538,78 @@ button:active {
 }
 
 /* ---------------------------------- */
+/* #6 */
+/* ---------------------------------- */
+.dividirDiv9 {
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: #344a8f;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-button9 {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  z-index: 2;
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #1158f0;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.animated-button9:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.animated-button9:hover .svgContainer {
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(4px);
+}
+
+.scaling-svg{
+  scale: calc(1.5);
+}
+/* ---------------------------------- */
 /*   probando el z-index */
 /* ---------------------------------- */
 
