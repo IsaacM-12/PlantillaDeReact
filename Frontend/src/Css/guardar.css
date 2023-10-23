@@ -1,0 +1,43 @@
+paleta colores orden
+#031926
+#344a8f
+rgb(186, 197, 248)
+#e88760;
+
+
+.dividirDiv1 {
+  padding-top: 40px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: #031926;
+  height: 250px;
+}
+
+  .dividirDiv3 {
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(186, 197, 248);
+    height: 250px;
+  
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+.siu{
+  background: radial-gradient(100% 100% at center,hsla(0, 96%, 52%, 0) 47.8%,hsl(0, 4%, 26%) 48%);
+}

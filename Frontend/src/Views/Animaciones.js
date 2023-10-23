@@ -74,23 +74,45 @@ const Animaciones = () => {
         </button>
       </div>
 
+      <div className="dividirDiv10">
+        <button class="animated-button10">
+          <span>Click Me!</span>
+        </button>
+      </div>
+
       <h1> z-index </h1>
 
-      <div class="container-figures">
+      <div class="dividirDiv11">
         <div class="circle"></div>
         <div class="square"></div>
         <div class="triangle"></div>
       </div>
 
-      <div>
-        <h1>{texto}</h1>
-        <img
-          className="img-gallery"
-          id="img-gallery"
-          src="https://cdn-3.expansion.mx/dims4/default/1308750/2147483647/strip/true/crop/1125x591+0+0/resize/1200x630!/format/jpg/quality/80/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F01%2Fd9%2F38db964e40a5bf4167c85f487a96%2Felwbeczvoaissv9.jpg"
-          onClick={handleImageClick}
-        ></img>
+      <div class="dividirDiv12">
+        <div
+          aria-label="Orange and tan hamster running in a metal wheel"
+          role="img"
+          class="wheel-and-hamster"
+        >
+          <div class="wheel"></div>
+          <div class="hamster">
+            <div class="hamster__body">
+              <div class="hamster__head">
+                <div class="hamster__ear"></div>
+                <div class="hamster__eye"></div>
+                <div class="hamster__nose"></div>
+              </div>
+              <div class="hamster__limb hamster__limb--fr"></div>
+              <div class="hamster__limb hamster__limb--fl"></div>
+              <div class="hamster__limb hamster__limb--br"></div>
+              <div class="hamster__limb hamster__limb--bl"></div>
+              <div class="hamster__tail"></div>
+            </div>
+          </div>
+          <div class="spoke"></div>
+        </div>
       </div>
+
     </div>
   );
 };

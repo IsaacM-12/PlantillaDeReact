@@ -1,10 +1,16 @@
 /* 
 paleta de colores inspiracion 
-https://coolors.co/031926-a0eec0-82a0bc-8ae9c1
+https://coolors.co/
+
+https://uicolors.app/create 
 
 
-Estilos 
-https://neumorphism.io/#e0e0e0
+Elejir Estilos de botones cartas y otros 
+https://neumorphism.io
+
+
+Crear Movimientos
+https://animista.net/
 */
 
 /* ---------------------------------- */
@@ -606,23 +612,106 @@ button:active {
   backdrop-filter: blur(4px);
 }
 
-.scaling-svg{
+.scaling-svg {
   scale: calc(1.5);
 }
+
+/* ---------------------------------- */
+/* #6 */
+/* ---------------------------------- */
+.dividirDiv10 {
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(186, 197, 248);
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-button10 {
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+  padding: 1em 2em;
+  border: 0;
+  background-color: #212121;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 2;
+  border-radius: var(--border-radius);
+}
+
+.animated-button10::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(
+    #488cfb,
+    #29dbbc,
+    #ddf505,
+    #ff9f0e,
+    #e440bb,
+    #655adc,
+    #488cfb
+  );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+}
+
+.animated-button10:hover::after {
+  animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+.animated-button10,
+.animated-button10::after {
+  box-sizing: border-box;
+}
+
+.animated-button10:active {
+  --border-width: 5px;
+}
+
 /* ---------------------------------- */
 /*   probando el z-index */
 /* ---------------------------------- */
-
-.container-figures {
+.dividirDiv11 {
   padding-top: 40px;
   margin-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  background-color: #216ce6;
+  background-color: #031926;
   height: 250px;
+
   align-items: center;
   justify-content: center;
-
   position: relative;
 }
 
@@ -666,5 +755,19 @@ button:active {
 }
 
 /* ---------------------------------- */
-/*   Imagenes */
+/*   Loading */
 /* ---------------------------------- */
+
+.dividirDiv12 {
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(186, 197, 248);
+  height: 250px;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
