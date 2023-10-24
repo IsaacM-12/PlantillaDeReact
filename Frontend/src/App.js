@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Plantilla from "./Views/Plantilla";
 import Layout from "./Components/Layout";
 import Galery from "./Views/Galery";
-import Animaciones from "./Views/Animaciones";
+import Animaciones from "./Views/Animaciones/Animaciones";
 
 function App() {
   function NotFound() {

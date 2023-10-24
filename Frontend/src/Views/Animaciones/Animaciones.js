@@ -1,5 +1,5 @@
 import "react-notifications/lib/notifications.css";
-import "../Css/Animations.css";
+import "./Animations.css";
 import { useState } from "react";
 
 const Animaciones = () => {
@@ -10,7 +10,7 @@ const Animaciones = () => {
   };
 
   return (
-    <div>
+    <div className="hidden">
       <h1> Animaciones con texto </h1>
 
       <div className="dividirDiv1">
