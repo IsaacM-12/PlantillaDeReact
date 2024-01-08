@@ -1,0 +1,12 @@
+/* ---------------------------------- */
+/* parte de la galeria  */
+/* ---------------------------------- */
+
+.img-gallery {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.img-gallery:hover {
+  transform: scale(1.1);
+}

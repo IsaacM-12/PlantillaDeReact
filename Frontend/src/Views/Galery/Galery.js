@@ -3,8 +3,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "react-notifications/lib/notifications.css";
 import { NotificationContainer } from "react-notifications";
+import "./Galery.css";
 
 const Galery = () => {
+  const handleLabelClick = (color) => {
+    document.querySelector(".fondo").style.backgroundColor = color;
+  };
+
   // -------------------------------------------------------------
   // Estas se mostraran en el HTML
   // -------------------------------------------------------------
@@ -93,8 +98,17 @@ const Galery = () => {
   //   };
 
   return (
-    <div>
+    <div className="fondo">
       <h1> Galería </h1>
+      <select
+        id="colorSelect"
+        onChange={(e) => handleLabelClick(e.target.value)}
+      >
+        <option value="black">Negro</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="white">Blanco</option>
+      </select>
 
       <input type="text" onChange={(e) => setinputSearch(e.target.value)} />
       {/* <button onClick={selectImageToBDFilter}>Buscar</button> */}

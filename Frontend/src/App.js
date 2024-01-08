@@ -1,9 +1,9 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Plantilla from "./Views/Plantilla";
+import { BrowserRouter, Form, Route, Routes } from "react-router-dom";
 import Layout from "./Components/Layout";
-import Galery from "./Views/Galery";
+import Galery from "./Views/Galery/Galery";
 import Animaciones from "./Views/Animaciones/Animaciones";
+import Forms from "./Views/Form/Form";
 
 function App() {
   function NotFound() {
@@ -39,13 +39,14 @@ function App() {
       </div>
     );
   }
+
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Animaciones />} />
-            <Route path="/plantilla" element={<Plantilla />} />
+            <Route path="/form" element={<Forms />} />
             <Route path="/galery" element={<Galery />} />
             <Route path="/animacion" element={<Animaciones />} />
             <Route path="*" element={<NotFound />} />

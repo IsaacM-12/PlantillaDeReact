@@ -24,7 +24,7 @@ function Navbar() {
           </svg>
           Home
         </Link>
-        <Link to="/plantilla" class="link-navbar">
+        <Link to="/form" class="link-navbar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

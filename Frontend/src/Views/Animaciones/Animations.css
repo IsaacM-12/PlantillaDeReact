@@ -91,6 +91,8 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .animated-element-siu2 {
@@ -623,7 +625,7 @@ button:active {
 }
 
 /* ---------------------------------- */
-/* #6 */
+/* #7 */
 /* ---------------------------------- */
 .dividirDiv10 {
   padding-top: 20px;
@@ -646,7 +648,6 @@ button:active {
   padding: 1em 2em;
   border: 0;
   background-color: #212121;
-  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #fff;

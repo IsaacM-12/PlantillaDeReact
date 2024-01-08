@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./Form.css";
 
-const Plantilla = () => {
+const Form = () => {
   // -------------------------------------------------------------
   // Estas se mostraran en el HTML
   // -------------------------------------------------------------
@@ -10,8 +11,10 @@ const Plantilla = () => {
   // -------------------------------------------------------------
   // Seran input
   // -------------------------------------------------------------
-  const [inputName, setinputName] = useState(0);
+  const [inputName, setinputName] = useState("");
   const [inputNumber, setinputNumber] = useState(0);
+
+  // Borrar
   const [inputVarToDelete, setinputVarToDelete] = useState(0);
 
   // -------------------------------------------------------------
@@ -38,7 +41,7 @@ const Plantilla = () => {
       number: inputNumber,
     };
 
-    if (newVariable.name === 0 || newVariable.number === 0) {
+    if (newVariable.name === "" || newVariable.number === 0) {
       alert("Debe digitar todos los datos.");
     } else {
       const serviceUrl = `http://localhost:8080/app`;
@@ -88,7 +91,7 @@ const Plantilla = () => {
   };
 
   // -------------------------------------------------------------
-  // seleciona las variables
+  // seleciona las variables y les agrega un boton de borrar a la par
   // -------------------------------------------------------------
   const selectVariablesBD = async () => {
     const serviceUrl = "http://localhost:8080/app";
@@ -97,23 +100,52 @@ const Plantilla = () => {
         "Content-Type": "application/json",
       },
     };
+
     try {
       let response = await axios.get(serviceUrl, config);
 
       if (response.data.length > 0) {
-        let varList = response.data.map((item) => {
-          return (
-            <li key={item.id}>
-              {item.id} Nombre: {item.name}, Numero: {item.number}
-            </li>
-          );
-        });
+        let varList = response.data.map((item) => (
+          <li key={item.id}>
+            {item.id} Nombre: {item.name}, Numero: {item.number}
+            <button
+              className="btn btn-danger m-4"
+              onClick={() => deleteVariable(item.id)}
+            >
+              Borrar
+            </button>
+          </li>
+        ));
+
         setshowVariables(varList);
       } else {
         setshowVariables(<h2>No hay datos</h2>);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
+    }
+  };
+
+  const deleteVariable = async (id) => {
+    const isConfirmed = window.confirm(
+      "¿Estás seguro de que deseas borrar este elemento?"
+    );
+
+    if (isConfirmed) {
+      const serviceUrl = `http://localhost:8080/app/${id}`;
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      try {
+        await axios.delete(serviceUrl, config);
+        // Actualiza la lista después de borrar
+        selectVariablesBD();
+      } catch (error) {
+        console.error("Error deleting data:", error);
+      }
     }
   };
 
@@ -124,18 +156,32 @@ const Plantilla = () => {
       <div className="mb-4">{showVariables}</div>
 
       <div className="input-group mb-4">
+        <div className="input-group-prepend">
+          <label className="input-group-text" htmlFor="inputName">
+            Nombre:
+          </label>
+        </div>
         <input
           type="text"
+          id="inputName"
           className="form-control"
           value={inputName}
           onChange={(e) => setinputName(e.target.value)}
         />
+
+        <div className="input-group-prepend">
+          <label className="input-group-text" htmlFor="inputNumber">
+            Número:
+          </label>
+        </div>
         <input
           type="number"
+          id="inputNumber"
           className="form-control"
           value={inputNumber}
           onChange={(e) => setinputNumber(e.target.value)}
         />
+
         <div className="input-group-append">
           <button
             className="btn btn-primary"
@@ -147,7 +193,7 @@ const Plantilla = () => {
         </div>
       </div>
 
-      <div className="input-group mb-3">
+      <div className="input-group mb-4">
         <input
           type="text"
           className="form-control"
@@ -165,4 +211,4 @@ const Plantilla = () => {
     </div>
   );
 };
-export default Plantilla;
+export default Form;

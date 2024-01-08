@@ -1,22 +1,21 @@
--- Solo para h2 DEBE DESCOMENTARLO
---
--- insert into App(id,name) values(1,'name1');
--- insert into App(id,name) values(2,'name2');
-
-
--- ----------------------------------------------------------
--- MYSQL LO QUE DEBE CORRER EN LA BASE MYSQL
--- ----------------------------------------------------------
-
--- drop database ioproyect;
--- create database ioproyect;
--- use ioproyect;
---
--- --------------------------------- --------
--- -- -- TABLES
--- -- ---------------------------------------
 -- drop database plantillamysql;
---create database plantillamysql;
+-- create database plantillamysql;
 --use plantillamysql;
 --
 --SELECT * from App;
+--SELECT * from Image;
+--
+--INSERT INTO image (id, name, url) VALUES ("7",'Name', 'https://www.youtube.com/watch?v=4b0gzFXmtCk');
+--
+--INSERT INTO App (id, name, number) VALUES ("1",'Name', 1);
+--
+--INSERT INTO image (id, name, url) VALUES ("1",'Name', 'https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQOO0X7mMnoYz-e9Zdc6Pe6Wz7Ow1DcvhEiaex5aSv6QJDoCtcooqA7UUbjrphvjlIc');
+--INSERT INTO image (id, name, url) VALUES ("2",'Name', "https://www.nationalgeographic.com.es/medio/2023/07/14/san-bernardo-2_00dceea7_230714151906_800x800.jpg");
+--INSERT INTO image (id, name, url) VALUES ("3",'Name', 'https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQOO0X7mMnoYz-e9Zdc6Pe6Wz7Ow1DcvhEiaex5aSv6QJDoCtcooqA7UUbjrphvjlIc');
+--INSERT INTO image (id, name, url) VALUES ("4",'Name', "https://www.nationalgeographic.com.es/medio/2023/07/14/san-bernardo-2_00dceea7_230714151906_800x800.jpg");
+--
+--
+---- hay que quitar el modo seguro
+--SET SQL_SAFE_UPDATES = 0;
+--DELETE FROM image WHERE id = 7;
+--SET SQL_SAFE_UPDATES = 1;
