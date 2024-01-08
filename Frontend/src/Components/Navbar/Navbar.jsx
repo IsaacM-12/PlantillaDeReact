@@ -83,6 +83,10 @@ function Navbar() {
           </svg>
           Animacion
         </Link>
+
+        <Link to="/configuraciones" class="link-navbar">
+          Configuraciones
+        </Link>
       </div>
     </div>
   );

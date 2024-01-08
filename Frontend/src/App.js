@@ -4,6 +4,7 @@ import Layout from "./Components/Layout";
 import Galery from "./Views/Galery/Galery";
 import Animaciones from "./Views/Animaciones/Animaciones";
 import Forms from "./Views/Form/Form";
+import Configuraciones from "./Views/config/Configuraciones";
 
 function App() {
   function NotFound() {
@@ -49,6 +50,7 @@ function App() {
             <Route path="/form" element={<Forms />} />
             <Route path="/galery" element={<Galery />} />
             <Route path="/animacion" element={<Animaciones />} />
+            <Route path="/configuraciones" element={<Configuraciones />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

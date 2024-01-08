@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #0D1117;
+  background-color: #0d1117;
   justify-content: center;
 }
 
@@ -25,12 +25,12 @@
 
 .link-navbar:not(:active):hover,
 .link-navbar:focus {
-  background-color: #21262C;
+  background-color: #21262c;
 }
 
 .link-navbar:focus,
 .link-navbar:active {
-  background-color: #1A1F24;
+  background-color: #1a1f24;
   outline: none;
 }
 
@@ -41,7 +41,7 @@
   left: -10px;
   width: 5px;
   height: 80%;
-  background-color: #2F81F7;
+  background-color: #2f81f7;
   border-radius: 5px;
   opacity: 0;
 }
@@ -52,14 +52,36 @@
 }
 
 .link-navbar svg {
-  width: 15px
+  width: 15px;
 }
 
-.containe-navbar:hover > :not(.link-navbar:hover) {
+/* label para background */
+.labelColor-navbar {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  display: flex;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.labelColor-navbar:focus {
+  color: #0d1117;
+}
+
+
+
+/* Aplicar estilos hover a elementos con clase .link-navbar dentro de .containe-navbar */
+.containe-navbar:hover > *:not(.link-navbar:hover):not(.labelColor-navbar:hover):not(.buttonBackground:hover) {
   transition: 300ms;
   filter: blur(1px);
-  transform: scale(0.95,0.95);
+  transform: scale(0.95, 0.95);
 }
+
 
 /* Estilos para pantallas con ancho menor de 500px */
 @media (max-width: 500px) {
@@ -71,4 +93,14 @@
   .link-navbar {
     margin-left: 0;
   }
+
+  .labelColor {
+    margin-left: 0;
+  }
+}
+
+.buttonBackground{
+  background-color: transparent;
+  color: white;
+  font-size: smaller;
 }
